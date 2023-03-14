@@ -7,7 +7,7 @@ function Header() {
   const categories = ['Health', 'Food', 'Travel', 'Technology'];
 
   return (
-    <div className="flex h-14 items-center justify-between bg-blue-400 py-5">
+    <div className="flex h-14 items-center justify-between bg-blue-100 py-5">
       <FaHome />
       <div className="flex items-center justify-evenly">
         {categories.map((item) => (
