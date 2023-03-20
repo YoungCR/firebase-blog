@@ -39,9 +39,9 @@ function Banner() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    <div className="h-[50vh] w-11/12 my-5 mx-auto grid grid-cols-5">
+    <div className="my-5 mx-auto grid h-[50vh] w-11/12 grid-cols-5">
       <div
-        className="bg-no-repeat bg-center bg-cover flex flex-col col-span-3 justify-end pl-5 pb-5 text-white "
+        className="col-span-3 flex flex-col justify-end bg-cover bg-center bg-no-repeat pl-5 pb-5 text-white "
         style={{ backgroundImage: `url(${mainArticle.imageUrl})` }}
       >
         <div className="bg-gray-500 px-2 pb-1.5">
@@ -49,10 +49,10 @@ function Banner() {
           <p>{mainArticle?.createdAt?.toDate().toDateString()}</p>
         </div>
       </div>
-      <div className="grid grid-cols-2 col-span-2 gap-2.5 px-2.5">
+      <div className="col-span-2 grid grid-cols-2 gap-2.5 px-2.5">
         {otherArticles.map((item) => (
           <div
-            className="flex flex-col justify-end text-white bg-no-repeat bg-center pl-2.5 pb-2.5"
+            className="flex flex-col justify-end bg-center bg-no-repeat pl-2.5 pb-2.5 text-white"
             style={{ backgroundImage: `url(${item.imageUrl})` }}
             key={item.id}
           >
