@@ -17,6 +17,16 @@ function Header() {
   return (
     <div className="flex h-14 items-center justify-between bg-blue-100 py-5">
       <FaHome onClick={() => navigate('/')} />
+      <div>
+        {user ? (
+          <Link
+            className="rounded-full bg-indigo-600 py-1.5 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            to="/addarticle"
+          >
+            Add Article
+          </Link>
+        ) : null}
+      </div>
       <div className="flex items-center justify-evenly">
         {categories.map((item) => (
           <Link to={`/category/${item}`} className="ml-2.5" key={item}>

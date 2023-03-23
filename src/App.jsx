@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import AddArticle from './pages/AddArticle';
 import Auth from './pages/Auth';
 import CategoryArticle from './pages/CategoryArticle';
 import Homepage from './pages/Homepage';
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/category/:categoryName" element={<CategoryArticle />} />
+          <Route path="/addarticle" element={<AddArticle />} />
         </Routes>
       </BrowserRouter>
     </div>

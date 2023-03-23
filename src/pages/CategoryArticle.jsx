@@ -9,6 +9,7 @@ import {
   where,
 } from 'firebase/firestore';
 import { db } from '../config/firebaseConfig';
+import ArticleCard from '../components/ArticleCard';
 
 function CategoryArticle() {
   // grab the parameter in the url
@@ -49,7 +50,7 @@ function CategoryArticle() {
       {articles.length === 0 ? (
         <p>no {categoryName} articles</p>
       ) : (
-        articles?.map((item) => <p key={item.id}>{item?.title}</p>)
+        articles?.map((item) => <ArticleCard article={item} />)
       )}
     </div>
   );
